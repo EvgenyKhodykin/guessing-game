@@ -59,11 +59,18 @@ document.querySelector('#btnOver').addEventListener('click', ()=> {
 document.querySelector('#btnLess').addEventListener('click', ()=> {
     if (gameRun){
         if (minValue === maxValue){
-            const phraseRandom = Math.round( Math.random());
-            const answerPhrase = (phraseRandom === 1) ?
-                `Вы загадали неправильное число!\n\u{1F914}` :
-                `Я сдаюсь..\n\u{1F92F}`;
-
+            const phraseRandom = Math.floor(Math.random()*3);
+            let answerPhrase = '';
+            switch(phraseRandom){
+                case 0:
+                   answerPhrase =`Вы загадали неправильное число!\n\u{1F914}`;
+                   break;
+                case 1:
+                    answerPhrase =`Я сдаюсь...\n\u{1F92F}`;
+                    break;
+                default:
+                    answerPhrase =`Так это не работает...\n\u{1F92E}`;    
+            }
             answerField.innerText = answerPhrase;
             gameRun = false;
         } else {
