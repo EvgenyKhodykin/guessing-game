@@ -1,0 +1,19 @@
+.game-card {
+    height: 100vh;
+    font-family: 'Open Sans', monospace;
+}
+body {
+    background-color: antiquewhite;
+}
+.card {
+    border: 0.5px solid black;
+}
+.card-header, .card-footer {
+    background-color: azure;
+    font-size: 25px;
+    color: blue;
+}
+#btnRetry {
+    font-size: 25px;
+    color: blue;
+}
