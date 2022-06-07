@@ -58,7 +58,7 @@ document.querySelector('#btnOver').addEventListener('click', ()=> {
 
 document.querySelector('#btnLess').addEventListener('click', ()=> {
     if (gameRun){
-        if (minValue === maxValue){
+        if (minValue === maxValue || minValue == answerNumber){
             const phraseRandom = Math.floor(Math.random()*3);
             let answerPhrase = '';
             switch(phraseRandom){
